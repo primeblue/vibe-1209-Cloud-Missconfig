@@ -1,0 +1,264 @@
+.analysis-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-bottom: 2px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.panel-header h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.analyze-button {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.analyze-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.analyze-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.filtered-section,
+.llm-analysis-section {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.filtered-section h3,
+.llm-analysis-section h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.issues-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.issues-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.summary-item {
+  color: #666;
+}
+
+.summary-item strong {
+  font-weight: 600;
+}
+
+.issues-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.issue-item {
+  padding: 12px;
+  border-left: 4px solid #ffc107;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.issue-item:hover {
+  transform: translateX(2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.issue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.issue-type {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.severity-badge {
+  padding: 4px 10px;
+  color: white;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.issue-desc {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.issue-location {
+  color: #666;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.no-issues {
+  padding: 15px;
+  background: #d4edda;
+  color: #155724;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.risk-level {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.risk-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.risk-badge {
+  padding: 8px 16px;
+  color: white;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.misconfigs-section,
+.threats-section {
+  margin-bottom: 20px;
+}
+
+.misconfigs-section h4,
+.threats-section h4 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.misconfigs-section ul,
+.threats-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.misconfigs-section li,
+.threats-section li {
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #f8f9fa;
+  border-left: 3px solid #667eea;
+  border-radius: 4px;
+}
+
+.patched-section {
+  margin-top: 20px;
+}
+
+.patched-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.patched-header h4 {
+  font-size: 1rem;
+  color: #333;
+}
+
+.toggle-button {
+  padding: 6px 12px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.toggle-button:hover {
+  background: #5568d3;
+}
+
+.patched-content {
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.patched-content pre {
+  color: #d4d4d4;
+  font-size: 0.85rem;
+  overflow-x: auto;
+  margin-bottom: 10px;
+}
+
+.download-button {
+  padding: 10px 20px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.download-button:hover {
+  background: #45a049;
+}
+
+.analysis-placeholder {
+  padding: 40px 20px;
+  text-align: center;
+  color: #999;
+}
+

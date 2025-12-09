@@ -1,0 +1,47 @@
+.policy-viewer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.viewer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.viewer-header h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.file-type-badge {
+  padding: 6px 12px;
+  background: #667eea;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.viewer-content {
+  flex: 1;
+  overflow: auto;
+  padding: 20px;
+  background: #1e1e1e;
+}
+
+.viewer-content pre {
+  margin: 0;
+  color: #d4d4d4;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.viewer-content code {
+  font-family: 'Courier New', monospace;
+}
+

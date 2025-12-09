@@ -1,0 +1,35 @@
+{
+  "properties": {
+    "securityRules": [
+      {
+        "name": "AllowAllInbound",
+        "properties": {
+          "description": "Allow all inbound traffic",
+          "protocol": "*",
+          "sourcePortRange": "*",
+          "destinationPortRange": "*",
+          "sourceAddressPrefix": "*",
+          "destinationAddressPrefix": "*",
+          "access": "Allow",
+          "priority": 100,
+          "direction": "Inbound"
+        }
+      },
+      {
+        "name": "AllowAllOutbound",
+        "properties": {
+          "description": "Allow all outbound traffic",
+          "protocol": "*",
+          "sourcePortRange": "*",
+          "destinationPortRange": "*",
+          "sourceAddressPrefix": "*",
+          "destinationAddressPrefix": "*",
+          "access": "Allow",
+          "priority": 200,
+          "direction": "Outbound"
+        }
+      }
+    ]
+  }
+}
+
